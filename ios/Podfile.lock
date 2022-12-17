@@ -1,0 +1,100 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_share (0.0.1):
+    - Flutter
+  - fluttertoast (0.0.2):
+    - Flutter
+    - Toast
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - path_provider_ios (0.0.1):
+    - Flutter
+  - sqflite (0.0.2):
+    - Flutter
+    - FMDB (>= 2.7.5)
+  - Stripe (22.7.1):
+    - Stripe/Stripe3DS2 (= 22.7.1)
+    - StripeApplePay (= 22.7.1)
+    - StripeCore (= 22.7.1)
+    - StripeUICore (= 22.7.1)
+  - Stripe/Stripe3DS2 (22.7.1):
+    - StripeApplePay (= 22.7.1)
+    - StripeCore (= 22.7.1)
+    - StripeUICore (= 22.7.1)
+  - stripe_ios (0.0.1):
+    - Flutter
+    - Stripe (~> 22.7.0)
+    - StripeFinancialConnections (~> 22.7.0)
+  - StripeApplePay (22.7.1):
+    - StripeCore (= 22.7.1)
+  - StripeCore (22.7.1)
+  - StripeFinancialConnections (22.7.1):
+    - StripeCore (= 22.7.1)
+    - StripeUICore (= 22.7.1)
+  - StripeUICore (22.7.1):
+    - StripeCore (= 22.7.1)
+  - Toast (4.0.0)
+  - video_player_avfoundation (0.0.1):
+    - Flutter
+  - webview_flutter_wkwebview (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_share (from `.symlinks/plugins/flutter_share/ios`)
+  - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
+  - path_provider_ios (from `.symlinks/plugins/path_provider_ios/ios`)
+  - sqflite (from `.symlinks/plugins/sqflite/ios`)
+  - stripe_ios (from `.symlinks/plugins/stripe_ios/ios`)
+  - video_player_avfoundation (from `.symlinks/plugins/video_player_avfoundation/ios`)
+  - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/ios`)
+
+SPEC REPOS:
+  trunk:
+    - FMDB
+    - Stripe
+    - StripeApplePay
+    - StripeCore
+    - StripeFinancialConnections
+    - StripeUICore
+    - Toast
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_share:
+    :path: ".symlinks/plugins/flutter_share/ios"
+  fluttertoast:
+    :path: ".symlinks/plugins/fluttertoast/ios"
+  path_provider_ios:
+    :path: ".symlinks/plugins/path_provider_ios/ios"
+  sqflite:
+    :path: ".symlinks/plugins/sqflite/ios"
+  stripe_ios:
+    :path: ".symlinks/plugins/stripe_ios/ios"
+  video_player_avfoundation:
+    :path: ".symlinks/plugins/video_player_avfoundation/ios"
+  webview_flutter_wkwebview:
+    :path: ".symlinks/plugins/webview_flutter_wkwebview/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  flutter_share: 4be0208963c60b537e6255ed2ce1faae61cd9ac2
+  fluttertoast: 16fbe6039d06a763f3533670197d01fc73459037
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  path_provider_ios: 14f3d2fd28c4fdb42f44e0f751d12861c43cee02
+  sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
+  Stripe: fb29a476e4866fec4ef22fb76207363dd32795aa
+  stripe_ios: a0caca0ef103a32909183c62a652a91a0773b443
+  StripeApplePay: 09955cdf3f49b367af2feadd9c5b3bddb35446c0
+  StripeCore: 39ea580c26ccc324fb9671288a2ae21114e54dca
+  StripeFinancialConnections: 0e1d638388572d52ce829416fbc7b0af2bde3865
+  StripeUICore: eed17e95a4517fc02482e250a6422c2a81a14ce8
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  video_player_avfoundation: e489aac24ef5cf7af82702979ed16f2a5ef84cff
+  webview_flutter_wkwebview: b7e70ef1ddded7e69c796c7390ee74180182971f
+
+PODFILE CHECKSUM: 4e8f8b2be68aeea4c0d5beb6ff1e79fface1d048
+
+COCOAPODS: 1.11.3
