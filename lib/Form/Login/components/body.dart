@@ -29,10 +29,11 @@ class _BodyState extends State<Body> {
   TextEditingController email = TextEditingController();
 
   TextEditingController password = TextEditingController();
+  bool isHover = false;
 
   FocusNode emailFocus = FocusNode();
   FocusNode passwordFocus = FocusNode();
-List<LogicalKeyboardKey> keys =[];
+  List<LogicalKeyboardKey> keys = [];
   Future login() async {
     var box = Hive.box('data');
     print(email.text);
@@ -67,71 +68,86 @@ List<LogicalKeyboardKey> keys =[];
             ),
             SizedBox(height: size.height * 0.03),
             SizedBox(height: size.height * 0.03),
-        TextFieldContainer(
-          child: TextField(
-            focusNode: emailFocus,
-            autofocus: true,
-            onSubmitted: (value){
-              passwordFocus.requestFocus();
-            },
-            controller: email,
-            onChanged: (value){
-
-            },
-            cursorColor: color,
-
-            decoration: InputDecoration(
-              // icon: Icon(
-              //   icon,
-              //   color: kPrimaryColor,
-              // ),
-              hintText: "Email",
-              hintStyle: TextStyle(color: Colors.grey),
-              border: InputBorder.none,
-
-            ),
-          ),
-        ),
-
-        TextFieldContainer(
-          child: TextField(
-
-            focusNode: passwordFocus,
-            controller: password,
-            obscureText: true,
-            onChanged: (val){},
-            onSubmitted: (val){
-              passwordFocus.unfocus();
-            },
-            cursorColor: kPrimaryColor,
-            decoration: const InputDecoration(
-              hintText: "Password",
-              hintStyle: TextStyle(color: Colors.grey),
-              // icon: Icon(
-              //   Icons.lock,
-              //   color: kPrimaryColor,
-              // ),
-              suffixIcon: Icon(
-                Icons.visibility,
-                color: color,
+            TextFieldContainer(
+              child: TextField(
+                focusNode: emailFocus,
+                autofocus: true,
+                onSubmitted: (value) {
+                  passwordFocus.requestFocus();
+                },
+                controller: email,
+                onChanged: (value) {},
+                cursorColor: color,
+                decoration: InputDecoration(
+                  // icon: Icon(
+                  //   icon,
+                  //   color: kPrimaryColor,
+                  // ),
+                  hintText: "Email",
+                  hintStyle: TextStyle(color: Colors.grey),
+                  border: InputBorder.none,
+                ),
               ),
-              border: InputBorder.none,
             ),
-          ),
-        ),
+
+            TextFieldContainer(
+              child: TextField(
+                focusNode: passwordFocus,
+                controller: password,
+                obscureText: true,
+                onChanged: (val) {},
+                onSubmitted: (val) {
+                  passwordFocus.unfocus();
+                },
+                cursorColor: kPrimaryColor,
+                decoration: const InputDecoration(
+                  hintText: "Password",
+                  hintStyle: TextStyle(color: Colors.grey),
+                  // icon: Icon(
+                  //   Icons.lock,
+                  //   color: kPrimaryColor,
+                  // ),
+                  suffixIcon: Icon(
+                    Icons.visibility,
+                    color: color,
+                  ),
+                  border: InputBorder.none,
+                ),
+              ),
+            ),
             // RoundedPasswordField(
             //   controller: password,
             //   onChanged: (value) {}, focusNode: passwordFocus,
             // ),
-            RoundedButton(
-              text: "LOGIN",
-              press: () async{
-                print("log");
-               await login();
-
-
+            SizedBox(height: 20),
+            InkWell(
+              onFocusChange: (value) {
+                isHover = value;
+                setState(() {});
               },
+              onTap: () async {
+                print("Click user======");
+                await login();
+              },
+              child: Container(
+                width: double.infinity,
+                color: isHover ? Colors.green : Colors.red,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Center(
+                    child: Text("LOGIN"),
+                  ),
+                ),
+              ),
             ),
+            // RoundedButton(
+            //   text: "LOGIN",
+            //   press: () async{
+            //     print("log");
+            //    await login();
+
+            //   },
+            // ),
             // SizedBox(height: size.height * 0.03),
             // AlreadyHaveAnAccountCheck(
             //   press: () {
